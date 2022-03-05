@@ -1,0 +1,101 @@
+import java.util.Random;
+//importation of utility random
+class Main {
+  static int[] LessCode(){
+    Random leel = new Random();
+    //declaring my random so i can use it
+    int Random=9;
+    int place1=0;
+    int place2=0;
+    int place3=0;
+    int RR1=0;
+    int RR2=0;
+    int RR3=0;
+    //most of my variable being declared
+    int place=1+leel.nextInt(Random);//creating a random int
+    place1=place;
+    if(place1==1||place1==2||place1==3){
+      RR1=1;
+      RR2=2;
+      RR3=3;}
+    
+    place=1+leel.nextInt(Random);
+    //creating a random int
+    if (place1==place||RR1==1||RR2==2||RR3==3){
+      while(place1==place||place==1||place==2||place==3){
+        place=1+leel.nextInt(Random);}//creating a random int
+    }
+    while(place1==place){
+      place=1+leel.nextInt(Random);}/*creating a random int*/
+    
+    place2=place;
+    if(place2==1||place2==2||place2==3){
+      RR1=1;
+      RR2=2;
+      RR3=3;}
+
+    place=1+leel.nextInt(Random);//creating a random int
+    while (place1==place||place2==place||RR1==1||RR2==2||RR3==3){
+      place=1+leel.nextInt(Random);//creating a random int
+      RR1=place;
+      RR2=place;
+      RR3=place;}
+    
+    place3=place;
+    int palaces[]={place1,place2,place3};
+    return palaces;
+  }
+
+  public static void main(String[] args){
+    int[] Places = LessCode();
+    String place1=" ";
+    String place2=" ";
+    String place3=" ";
+    
+    if(Places[0]==1||Places[0]==2||Places[0]==3){
+      place1=" attack approaching hoard of lizards ";}
+    else if(Places[0]==4){
+      place1=" descend down the stairs ";}
+    else if(Places[0]==5){
+      place1=" continue towards the battlefield by going through a set of doors ";}
+    else if(Places[0]==6){
+      place1=" jump through the open window to your left ";}
+    else if(Places[0]==7){
+      place1=" stay put outside the kings chamber to ensure his safety ";}
+    else if(Places[0]==8){
+      place1=" look around for more soldiers longing for the safety in groups ";}
+    else if(Places[0]==9){
+      place1=" head to the armory hoping to find any weapon ";}
+    
+    if(Places[1]==1||Places[1]==2||Places[1]==3){
+      place2=" attack approaching hoard of lizards ";}
+    else if(Places[1]==4){
+      place2=" descend down the stairs ";}
+    else if(Places[1]==5){
+      place2=" continue towards the battlefield by going through a set of doors ";}
+    else if(Places[1]==6){
+      place2=" jump through the open window to your left ";}
+    else if(Places[1]==7){
+      place2=" stay put outside the kings chamber to ensure his safety ";}
+    else if(Places[1]==8){
+      place2=" look around for more soldiers longing for the safety in groups ";}
+    else if(Places[1]==9){
+      place2=" head to the armory hoping to find any weapon ";}
+    
+    if(Places[2]==1||Places[2]==2||Places[2]==3){
+      place3=" attack approaching hoard of lizards ";}
+    else if(Places[2]==4){
+      place3=" descend down the stairs ";}
+    else if(Places[2]==5){
+      place3=" continue towards the battlefield by going through a set of doors ";}
+    else if(Places[2]==6){
+      place3=" jump through the open window to your left ";}
+    else if(Places[2]==7){
+      place3=" stay put outside the kings chamber to ensure his safety ";}
+    else if(Places[2]==8){
+      place3=" look around for more soldiers longing for the safety in groups ";}
+    else if(Places[2]==9){
+      place3=" head to armory the hoping to find any weapon ";}
+    System.out.println("What would you like to do?\n1)"+place1+"\n2)"+place2+"\n3)"+place3);
+  }
+}
